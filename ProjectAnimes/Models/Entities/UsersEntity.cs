@@ -1,15 +1,18 @@
 ﻿namespace ProjectAnimes.Models.Entities
 {
-    public class UsersEntity
+    public class UsersEntity : BaseEntity
     {
-        public Guid Id { get; set; }
+        public string Name { get; private set; } = default!;
 
-        public string Name { get; set; } = default!;
+        public string Email { get; private set; } = default!;
 
-        public string Email { get; set; } = default!;
+        public string Password { get; private set; } = default!;
 
-        public string Password { get; set; } = default!;
+        public DateTime DateOfBirth { get; private set; } = default!;
 
-        public DateTime DateOfBirth { get; set; } = default!;
+        public override bool Validate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
