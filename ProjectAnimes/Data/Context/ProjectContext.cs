@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjectAnimes.Models.Entities;
+using ProjectAnimes.Models.Entities.Users;
 
 namespace ProjectAnimes.Data.Context
 {
@@ -51,7 +52,7 @@ namespace ProjectAnimes.Data.Context
             return base.SaveChanges();
         }
 
-        public void SetCreatedDateAndUpdatedDate()
+        private void SetCreatedDateAndUpdatedDate()
         {
             var entries = ChangeTracker
                 .Entries()
