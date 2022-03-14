@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ProjectAnimes.Models.Entities.Users
 {
-    public class UsersMap : IEntityTypeConfiguration<UsersEntity>
+    public class UsersEntityMap : IEntityTypeConfiguration<UsersEntity>
     {
         public void Configure(EntityTypeBuilder<UsersEntity> builder)
         {
