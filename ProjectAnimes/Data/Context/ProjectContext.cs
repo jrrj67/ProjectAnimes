@@ -45,6 +45,12 @@ namespace ProjectAnimes.Data.Context
             }
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new UsersEntityMap());
+            base.OnModelCreating(modelBuilder);
+        }
+
         public override int SaveChanges()
         {
             SetCreatedDateAndUpdatedDate();
