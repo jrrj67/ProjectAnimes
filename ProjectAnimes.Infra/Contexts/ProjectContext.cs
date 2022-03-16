@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProjectAnimes.Models.Entities;
-using ProjectAnimes.Models.Entities.Users;
+using ProjectAnimes.Domain.Entities;
+using ProjectAnimes.Domain.Entities.Users;
+using ProjectAnimes.Infra.Mappings;
 
-namespace ProjectAnimes.Data.Context
+namespace ProjectAnimes.Infra.Contexts
 {
     public class ProjectContext : DbContext
     {

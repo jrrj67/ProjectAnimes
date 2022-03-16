@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace ProjectAnimes.Models.Entities.Users
+namespace ProjectAnimes.Domain.Entities.Users
 {
     public class UsersEntityValidator : AbstractValidator<UsersEntity>
     {

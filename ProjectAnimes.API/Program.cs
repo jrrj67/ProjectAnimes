@@ -1,7 +1,7 @@
 using FluentValidation.AspNetCore;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
-using ProjectAnimes.Data.Context;
+using ProjectAnimes.Infra.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 

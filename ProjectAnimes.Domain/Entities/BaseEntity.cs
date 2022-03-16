@@ -1,6 +1,6 @@
-﻿namespace ProjectAnimes.Models.Entities
+﻿namespace ProjectAnimes.Domain.Entities
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntity : IBaseEntity
     {
         public Guid Id { get; private set; }
 
@@ -8,8 +8,8 @@
 
         private DateTime _updatedDate;
 
-        public DateTime CreatedDate 
-        { 
+        public DateTime CreatedDate
+        {
             get => _createdDate;
             set
             {
@@ -21,8 +21,8 @@
                 _createdDate = value;
             }
         }
-        
-        public DateTime UpdatedDate 
+
+        public DateTime UpdatedDate
         {
             get => _updatedDate;
             set
@@ -36,7 +36,7 @@
             }
         }
 
-        public List<string> _errors = new();
+        internal List<string> _errors = new();
 
         public IReadOnlyCollection<string> Errors { get => _errors; }
 

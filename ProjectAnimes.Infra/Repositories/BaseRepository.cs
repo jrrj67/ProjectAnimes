@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProjectAnimes.Data.Context;
-using ProjectAnimes.Models.Entities;
+using ProjectAnimes.Domain.Entities;
+using ProjectAnimes.Infra.Contexts;
 
-namespace ProjectAnimes.Data.Repositories
+namespace ProjectAnimes.Infra.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {

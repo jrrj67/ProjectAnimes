@@ -1,4 +1,6 @@
-﻿namespace ProjectAnimes.Models.Entities.Users
+﻿using ProjectAnimes.Domain.Exceptions;
+
+namespace ProjectAnimes.Domain.Entities.Users
 {
     public class UsersEntity : BaseEntity
     {
@@ -21,7 +23,21 @@
 
         public override bool Validate()
         {
-            throw new NotImplementedException();
+            var validator = new UsersEntityValidator();
+
+            var validation = validator.Validate(this);
+
+            if (!validation.IsValid)
+            {
+                foreach (var error in validation.Errors)
+                {
+                    _errors.Add(error.ErrorMessage);
+                }
+
+                throw new DomainException("Entity validation errors.", _errors);
+            }
+
+            return true;
         }
     }
 }

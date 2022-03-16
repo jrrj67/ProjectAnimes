@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ProjectAnimes.Domain.Entities.Users;
 
-namespace ProjectAnimes.Models.Entities.Users
+namespace ProjectAnimes.Infra.Mappings
 {
     public class UsersEntityMap : IEntityTypeConfiguration<UsersEntity>
     {

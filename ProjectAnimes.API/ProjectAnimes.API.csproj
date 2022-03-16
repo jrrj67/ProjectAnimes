@@ -23,7 +23,10 @@
 
   <ItemGroup>
     <Folder Include="Models\Responses\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectAnimes.Infra\ProjectAnimes.Infra.csproj" />
   </ItemGroup>
 
 </Project>

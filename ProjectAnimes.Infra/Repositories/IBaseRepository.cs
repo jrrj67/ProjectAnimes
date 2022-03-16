@@ -1,6 +1,6 @@
-﻿using ProjectAnimes.Models.Entities;
+﻿using ProjectAnimes.Domain.Entities;
 
-namespace ProjectAnimes.Data.Repositories
+namespace ProjectAnimes.Infra.Repositories
 {
     public interface IBaseRepository<T> where T : BaseEntity
     {
