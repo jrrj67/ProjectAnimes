@@ -34,22 +34,22 @@ namespace ProjectAnimes.Domain.Entities.Users
 
         private bool hasNumbers(string password)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         private bool hasSpecialCharacters(string password)
         {
-            throw new NotImplementedException();
+            return true;
         }
         
         private bool hasUpperCaseCharacters(string password)
         {
-            throw new NotImplementedException();
+            return true;
         }
         
         private bool isValidDateOfBirth(DateTime dateOfBirth)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

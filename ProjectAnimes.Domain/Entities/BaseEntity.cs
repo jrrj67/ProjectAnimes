@@ -40,6 +40,8 @@
 
         public IReadOnlyCollection<string> Errors { get => _errors; }
 
-        public abstract bool Validate();
+        public abstract bool ValidateAllFields();
+
+        public abstract bool ValidateSingleField(string name);
     }
 }
